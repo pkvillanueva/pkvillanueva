@@ -29,7 +29,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "http://api.pkvillanueva.com/wp-json"
+          "api": "https://api.pkvillanueva.com/wp-json"
         }
       }
     },
