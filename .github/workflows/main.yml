@@ -19,7 +19,7 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    # Deploy Vercel
+    # Deploy to Vercel
     - uses: amondnet/vercel-action@v19
       with:
         vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
