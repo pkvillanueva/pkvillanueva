@@ -18,6 +18,10 @@ const settings = {
 						[ 'About', '/about/' ],
 						[ 'Contact', '/contact/' ],
 					],
+					social: [
+						[ 'Github', 'https://github.com/pkvillanueva' ],
+						[ 'Twitter', 'https://twitter.com/pkvillanueva' ],
+					],
 					featured: {
 						showOnList: false,
 						showOnPost: false,

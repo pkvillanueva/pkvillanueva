@@ -24,7 +24,7 @@ const Container = styled.header`
   display: flex;
 	flex-direction: row;
 	align-items: center;
-	height: calc(var(--base-spacing) * 6);
+	height: 6rem;
 `;
 
 const Logo = styled.h2`
@@ -33,7 +33,7 @@ const Logo = styled.h2`
 `;
 
 const Home = styled( Link )`
-	margin-right: calc(var(--base-spacing) * 2);
+	margin-right: 2rem;
 	color: inherit;
   text-decoration: none;
 `;

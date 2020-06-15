@@ -24,17 +24,17 @@ const Button = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: calc(var(--base-spacing) * 2);
-	height: calc(var(--base-spacing) * 2);
+	width: 2rem;
+	height: 2rem;
 	padding: 0;
 	background-color: transparent;
 	border: none;
 	border-radius: 0;
 	box-shadow: none;
-	color: var(--color-gray);
+	color: var(--text-light);
 
 	&:hover {
-		color: var(--color-dark);
+		color: var(--text-dark);
 	}
 
 	&:focus {

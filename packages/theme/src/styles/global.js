@@ -8,15 +8,14 @@ export default css`
 	}
 
 	body {
-		background-color: var(--color-background);
-		color: var(--color-gray);
-		font-family: Inter var, system-ui, -apple-system, BlinkMacSystemFont,
-			Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-			Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+		background-color: var(--background);
+		color: var(--text);
+		font-family: var(--font-family);
+		line-height: 1.875;
 	}
 
 	a {
-		color: var(--color-primary);
+		color: var(--primary);
 		text-decoration: none;
 	}
 
@@ -26,7 +25,7 @@ export default css`
 	h4,
 	h5,
 	h6 {
-		color: var(--color-dark);
+		color: var(--text-dark);
 		font-weight: 500;
 	}
 

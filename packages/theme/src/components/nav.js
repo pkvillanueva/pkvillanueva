@@ -14,12 +14,12 @@ const Nav = ( { state, className } ) => (
 			// Check if the link matched the current page url
 				const isCurrentPage = state.router.link === link;
 				return (
-					<NavItem key={ name }>
+					<li key={ name }>
 						{ /* If link url is the current page, add `aria-current` for a11y */ }
-						<Link link={ link } aria-current={ isCurrentPage ? 'page' : undefined }>
+						<NavLink link={ link } aria-current={ isCurrentPage ? 'page' : undefined }>
 							{ name }
-						</Link>
-					</NavItem>
+						</NavLink>
+					</li>
 				);
 			} ) }
 		</NavList>
@@ -29,30 +29,24 @@ const Nav = ( { state, className } ) => (
 export default connect( Nav );
 
 const NavContainer = styled.nav`
-	margin-right: calc(var(--base-spacing) * 2);
+	margin-right: 2rem;
 `;
 
 const NavList = styled.ul`
-display: flex;
+	display: flex;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 `;
 
-const NavItem = styled.li`
-	&:not(:last-of-type) {
-		margin-right: calc(var(--base-spacing) * 0.5);
-	}
+const NavLink = styled( Link )`
+	position: relative;
+	display: inline-block;
+	padding: 0 1rem;
+	color: var(--text-light);
 
-	& > a {
-		display: inline-block;
-		padding: 0 calc(var(--base-spacing) * 0.5);
-		color: var(--color-gray);
-		line-height: calc(var(--base-spacing) * 3);
-
-		&:hover,
-		&[aria-current="page"] {
-			color: var(--color-dark);
-		}
+	&:hover,
+	&[aria-current="page"] {
+		color: var(--text-dark);
 	}
 `;

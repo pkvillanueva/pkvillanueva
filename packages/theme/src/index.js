@@ -19,6 +19,7 @@ const config = {
 		theme: {
 			colorMode: 'light',
 			menu: [],
+			social: [],
 			isMobileMenuOpen: false,
 			featured: {
 				showOnList: false,
@@ -40,6 +41,16 @@ const config = {
 			},
 			toggleColorMode: ( { state } ) => {
 				state.theme.colorMode = state.theme.colorMode === 'light' ? 'dark' : 'light';
+
+				if ( window ) {
+					window.localStorage.setItem( 'colorMode', state.theme.colorMode );
+				}
+			},
+			beforeCSR: ( { state } ) => {
+				if ( window ) {
+					const colorMode = window.localStorage.getItem( 'colorMode' ) || state.theme.colorMode;
+					state.theme.colorMode = colorMode;
+				}
 			},
 		},
 	},

@@ -83,16 +83,11 @@ const DateWrapper = styled.span`
  * selectors to style that HTML.
  */
 const Content = styled.div`
-	.wp-block-cover {
+	.hero-block {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		min-height: 100vh;
-
-		/* Home page cover. */
-		&:first-of-type {
-			min-height: calc(100vh - var(--base-spacing) * 7);
-		}
+		min-height: calc(100vh - 12rem);
 	}
 
 	img {

@@ -60,13 +60,16 @@ const Theme = ( { state } ) => {
 export default connect( Theme );
 
 const Container = styled.div`
-	max-width: var(--base-container);
+	display: flex;
+	flex-direction: column;
+	max-width: 60rem;
 	min-height: 100vh;
 	margin: 0 auto;
-	padding: 0 calc(var(--base-spacing) * 2);
+	padding: 0 2rem;
 `;
 
 const Main = styled.main`
+	flex-grow: 1;
 	font-size: 1.125rem;
 	line-height: 1.825;
 
@@ -79,16 +82,16 @@ const Main = styled.main`
 			content: '';
 			position: absolute;
 			left: 0;
-			bottom: calc(var(--base-spacing) * -0.25);
+			bottom: -0.125rem;
 			display: block;
-			height: calc(var(--base-spacing) * 0.125);
+			height: 0.125rem;
 			width: 100%;
-			background-color: var(--color-primary);
+			background-color: var(--primary);
 			transition: height 0.125s ease;
 		}
 
 		&:hover:after {
-			height: calc(var(--base-spacing) * 0.25);
+			height: 0.25rem;
 		}
 	}
 `;

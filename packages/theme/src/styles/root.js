@@ -3,24 +3,32 @@ import { css } from 'frontity';
 export default ( colorMode ) => {
 	let background = '#FFFFFF';
 	let primary = '#805AD5';
-	let dark = '#000000';
-	let gray = '#4A5568';
+	let text = {
+		base: '#2D3748',
+		light: '#68778D',
+		dark: '#1A202C',
+	};
 
 	if ( colorMode === 'dark' ) {
 		background = '#1A202C';
 		primary = '#F6E05E';
-		dark = '#FFFFFF';
-		gray = '#E2E8F0';
+		text = {
+			base: '#EDF2F7',
+			light: '#CBD5E0',
+			dark: '#F7FAFC',
+		};
 	}
 
 	return css`
 		:root {
-			--color-background: ${ background };
-			--color-primary: ${ primary };
-			--color-dark: ${ dark };
-			--color-gray: ${ gray };
-			--base-spacing: 1rem;
-			--base-container: 960px;
+			--background: ${ background };
+			--primary: ${ primary };
+			--text: ${ text.base };
+			--text-light: ${ text.light };
+			--text-dark: ${ text.dark };
+			--font-family: Inter var, system-ui, -apple-system, BlinkMacSystemFont,
+				Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+				Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 		}
 	`;
 };

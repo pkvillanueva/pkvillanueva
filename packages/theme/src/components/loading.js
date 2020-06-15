@@ -22,7 +22,7 @@ const Loading = () => (
 export default Loading;
 
 const bar = ( index ) => css`
-  background-color: rgba(12, 17, 43, 0.3);
+  background-color: var(--primary);
   width: 4px;
   height: 24px;
   margin: 3px;
@@ -34,8 +34,6 @@ const bar = ( index ) => css`
 `;
 
 const Container = styled.div`
-  width: 800px;
-  margin: 0;
   padding: 24px;
   display: flex;
   justify-content: center;
