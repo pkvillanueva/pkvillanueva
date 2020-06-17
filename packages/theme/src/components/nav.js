@@ -44,6 +44,7 @@ const NavLink = styled( Link )`
 	display: inline-block;
 	padding: 0 1rem;
 	color: var(--text-light);
+	transition: color 0.125s cubic-bezier(0.25, 0.1, 0.25, 1);
 
 	&:hover,
 	&[aria-current="page"] {

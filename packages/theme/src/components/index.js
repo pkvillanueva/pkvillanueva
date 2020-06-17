@@ -72,26 +72,4 @@ const Main = styled.main`
 	flex-grow: 1;
 	font-size: 1.125rem;
 	line-height: 1.825;
-
-	a:not([class]) {
-		position: relative;
-		white-space: nowrap;
-		color: inherit;
-
-		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			bottom: -0.125rem;
-			display: block;
-			height: 0.125rem;
-			width: 100%;
-			background-color: var(--primary);
-			transition: height 0.125s ease;
-		}
-
-		&:hover:after {
-			height: 0.25rem;
-		}
-	}
 `;

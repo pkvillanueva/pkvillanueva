@@ -90,6 +90,18 @@ const Content = styled.div`
 		min-height: calc(100vh - 12rem);
 	}
 
+	a {
+		background: linear-gradient(to right, var(--primary), var(--primary)) no-repeat;
+		background-position: 0 100%;
+		background-size: 0% 2px;
+		transition: background-size 0.25s cubic-bezier(0.85, 0.15, 0.15, 0.85);
+		color: var(--primary);
+
+		&:hover {
+			background-size: 100% 2px;
+		}
+	}
+
 	img {
 		width: 100%;
 		object-fit: cover;

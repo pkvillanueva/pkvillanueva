@@ -29,6 +29,15 @@ const Container = styled.footer`
 	justify-content: space-between;
 	height: 6rem;
 	color: var(--text-light);
+
+	a {
+		transition: color 0.125s cubic-bezier(0.25, 0.1, 0.25, 1);
+		color: var(--text-light);
+
+		&:hover {
+			color: var(--text-dark);
+		}
+	}
 `;
 
 const Nav = styled.nav`
@@ -37,9 +46,4 @@ const Nav = styled.nav`
 
 const NavLink = styled.a`
 	margin-left: 2rem;
-	color: var(--text-light);
-
-	&:hover {
-		color: var(--text-dark);
-	}
 `;

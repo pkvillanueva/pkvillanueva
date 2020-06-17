@@ -16,7 +16,7 @@ const settings = {
 						[ 'Blog', '/blog/' ],
 						[ 'Projects', '/projects/' ],
 						[ 'About', '/about/' ],
-						[ 'Contact', '/contact/' ],
+						[ 'Contact', 'mailto:pkrvillanueva@gmail.com' ],
 					],
 					social: [
 						[ 'Github', 'https://github.com/pkvillanueva' ],
@@ -33,6 +33,7 @@ const settings = {
 			name: '@frontity/wp-source',
 			state: {
 				source: {
+					root: 'https://api.pkvillanueva.com',
 					api: 'https://api.pkvillanueva.com/wp-json',
 					homepage: '/hello',
 					postsPage: '/blog',

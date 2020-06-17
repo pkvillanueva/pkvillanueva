@@ -1,6 +1,7 @@
 import Theme from './components';
 import image from '@frontity/html2react/processors/image';
 import iframe from '@frontity/html2react/processors/iframe';
+import link from './processors/link';
 
 const config = {
 	name: '@pkvillanueva/theme',
@@ -60,7 +61,7 @@ const config = {
 			 * Add a processor to `html2react` so it processes the `<img>` tags
 			 * inside the content HTML. You can add your own processors too
 			 */
-			processors: [ image, iframe ],
+			processors: [ image, iframe, link ],
 		},
 	},
 };

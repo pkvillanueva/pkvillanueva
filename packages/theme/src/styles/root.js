@@ -2,7 +2,7 @@ import { css } from 'frontity';
 
 export default ( colorMode ) => {
 	let background = '#FFFFFF';
-	let primary = '#805AD5';
+	let primary = '#4C51BF';
 	let text = {
 		base: '#2D3748',
 		light: '#68778D',

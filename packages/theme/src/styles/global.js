@@ -15,7 +15,7 @@ export default css`
 	}
 
 	a {
-		color: var(--primary);
+		color: inherit;
 		text-decoration: none;
 	}
 
