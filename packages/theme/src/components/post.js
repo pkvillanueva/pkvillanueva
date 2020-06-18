@@ -37,13 +37,6 @@ const Post = ( { state, actions, libraries } ) => {
 					{ /* Only display author and date on posts */ }
 					{ data.isPost && (
 						<div>
-							{ author && (
-								<Link link={ author.link }>
-									<Author>
-										By <b>{ author.name }</b>
-									</Author>
-								</Link>
-							) }
 							<DateWrapper>
 								{ ' ' }
 								on <b>{ date.toDateString() }</b>
@@ -70,9 +63,6 @@ const Post = ( { state, actions, libraries } ) => {
 export default connect( Post );
 
 const Title = styled.h1`
-`;
-
-const Author = styled.span`
 `;
 
 const DateWrapper = styled.span`

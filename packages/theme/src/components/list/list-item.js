@@ -22,14 +22,6 @@ const Item = ( { state, item } ) => {
 			</Link>
 
 			<div>
-				{ /* If the post has an author, we render a clickable author text. */ }
-				{ author && (
-					<Link link={ author.link }>
-						<AuthorName>
-							By <b>{ author.name }</b>
-						</AuthorName>
-					</Link>
-				) }
 				<PublishDate>
 					{ ' ' }
 					on <b>{ date.toDateString() }</b>
@@ -56,9 +48,6 @@ const Item = ( { state, item } ) => {
 export default connect( Item );
 
 const Title = styled.h2`
-`;
-
-const AuthorName = styled.span`
 `;
 
 const PublishDate = styled.span`
