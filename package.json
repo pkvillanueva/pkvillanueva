@@ -9,18 +9,19 @@
   "scripts": {
     "dev": "frontity dev",
     "build": "frontity build",
-		"serve": "frontity serve",
-		"lint:js": "eslint .",
-		"format:js": "eslint --fix ."
+    "serve": "frontity serve",
+    "lint:js": "eslint .",
+    "format:js": "eslint --fix ."
   },
   "prettier": {},
   "dependencies": {
-    "frontity": "^1.8.0",
     "@frontity/core": "^1.7.0",
-    "@frontity/wp-source": "^1.7.1",
-    "@frontity/tiny-router": "^1.2.0",
     "@frontity/html2react": "^1.3.3",
-    "@pkvillanueva/theme": "./packages/theme"
+    "@frontity/tiny-router": "^1.2.0",
+    "@frontity/wp-source": "^1.7.1",
+    "@pkvillanueva/theme": "./packages/theme",
+    "dayjs": "^1.8.28",
+    "frontity": "^1.8.0"
   },
   "devDependencies": {
     "@wordpress/eslint-plugin": "^6.1.0",

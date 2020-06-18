@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect, styled } from 'frontity';
+import dayjs from 'dayjs';
 import Link from '../link';
 import FeaturedMedia from '../featured-media';
 
@@ -12,8 +13,7 @@ import FeaturedMedia from '../featured-media';
  * - FeaturedMedia: the featured image/video of the post
  */
 const Item = ( { state, item } ) => {
-	const author = state.source.author[ item.author ];
-	const date = new Date( item.date );
+	const date = dayjs( item.date ).format( 'MMMM D, YYYY' );
 
 	return (
 		<article>
@@ -23,8 +23,7 @@ const Item = ( { state, item } ) => {
 
 			<div>
 				<PublishDate>
-					{ ' ' }
-					on <b>{ date.toDateString() }</b>
+					{ date }
 				</PublishDate>
 			</div>
 
@@ -38,7 +37,7 @@ const Item = ( { state, item } ) => {
 
 			{ /* If the post has an excerpt (short summary text), we render it */ }
 			{ item.excerpt && (
-				<Excerpt dangerouslySetInnerHTML={ { __html: item.excerpt.rendered } } />
+				<div dangerouslySetInnerHTML={ { __html: item.excerpt.rendered } } />
 			) }
 		</article>
 	);
@@ -51,7 +50,5 @@ const Title = styled.h2`
 `;
 
 const PublishDate = styled.span`
-`;
-
-const Excerpt = styled.div`
+	color: var(--text-light);
 `;

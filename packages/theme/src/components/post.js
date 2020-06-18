@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect, styled } from 'frontity';
+import dayjs from 'dayjs';
 import Link from './link';
 import List from './list';
 import FeaturedMedia from './featured-media';
@@ -12,7 +13,7 @@ const Post = ( { state, actions, libraries } ) => {
 	// Get the data of the author.
 	const author = state.source.author[ post.author ];
 	// Get a human readable date.
-	const date = new Date( post.date );
+	const date = dayjs( post.date ).format( 'MMMM D, YYYY' );
 
 	// Get the html2react component.
 	const Html2React = libraries.html2react.Component;
@@ -38,8 +39,7 @@ const Post = ( { state, actions, libraries } ) => {
 					{ data.isPost && (
 						<div>
 							<DateWrapper>
-								{ ' ' }
-								on <b>{ date.toDateString() }</b>
+								{ date }
 							</DateWrapper>
 						</div>
 					) }
@@ -66,6 +66,7 @@ const Title = styled.h1`
 `;
 
 const DateWrapper = styled.span`
+	color: var( --text-light );
 `;
 
 /**
